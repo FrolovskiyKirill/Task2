@@ -18,3 +18,16 @@ func addingOne(string: String) -> String {
 }
 
 addingOne(string: "abc1999")
+
+//Closures
+let myClosure = {
+    print("I love Swift")
+}
+
+func repeatTask (times: Int, task: () -> Void) {
+    for _ in 0...times {
+        task()
+    }
+}
+
+repeatTask(times: 5, task: myClosure)
