@@ -19,3 +19,13 @@ class Rectangle {
 let rectangleCalculate = Rectangle(height: 5, width: 10)
 
 rectangleCalculate.perimeter()
+
+//Area of the rectangle with extension
+extension Rectangle {
+    func area() -> Int {
+        let area = height * width
+        return area
+    }
+}
+
+rectangleCalculate.area()
