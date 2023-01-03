@@ -30,4 +30,32 @@ func repeatTask (times: Int, task: () -> Void) {
     }
 }
 
-repeatTask(times: 5, task: myClosure)
+repeatTask(times: 10, task: myClosure)
+
+//Enums
+enum Directions {
+    case up
+    case down
+    case right
+    case left
+}
+
+var location = (0, 0)
+
+let steps: [Directions] = [.up, .up, .left, .down, .left, .down, .down, .right, .right, .down, .right]
+
+for step in steps {
+    
+    switch step {
+    case .up:
+        location.0 += 1
+    case .down:
+        location.0 -= 1
+    case .right:
+        location.1 += 1
+    case .left:
+        location.1 -= 1
+    }
+}
+
+print(location)
